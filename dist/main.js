@@ -7,6 +7,7 @@ adviceID.textContent = `Advice # ${id}`;
 adviceQuote.textContent = '"' + advice + '"';
 
 const diceBtn = document.getElementById("diceBtn");
+let hammerInstance = new Hammer(diceBtn);
 
 diceBtn.addEventListener("click", () => {
   fetch("https://api.adviceslip.com/advice")
@@ -19,4 +20,13 @@ diceBtn.addEventListener("click", () => {
       adviceQuote.textContent = '"' + advice + '"';
     })
     .catch((error) => console.error("Error: ", error));
+});
+
+hammerInstance.on("tap", function (e) {
+  diceBtn.style.boxShadow =
+    "0 0 10px hsl(150, 100%, 66%), 0 0 20px hsl(150, 100%, 66%), 0 0 30px hsl(150, 100%, 66%), 0 0 40px hsl(150, 100%, 66%)";
+});
+
+hammerInstance.on("pressup", function (e) {
+  diceBtn.style.boxShadow = "";
 });
