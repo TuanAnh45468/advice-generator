@@ -12,10 +12,25 @@
   <title>Frontend Mentor | Advice generator app</title>
 
 </head>
-<body>
-  Advice #<!-- Advice ID goes here -->
+<body class="bg-dark-blue flex flex-col items-center justify-center min-h-screen">
+<main class="bg-dark-grayish-blue mobile:w-[335px] mobile:min-h-[300px] rounded-xl shadow-2xl relative flex flex-col">
+  <div class="text-neon-green text-center tracking-widest text-base" id="advice-id">
+    Advice #<!-- Advice ID goes here -->
+  </div>
 
-  "<!-- Advice text goes here -->"
+  <p class="text-light-cyan text-center overflow-auto max-h-[200px] p-4" id="advice-quote">
+    "<!-- Advice text goes here -->"
+  </p>
 
+  <div class="px-4 absolute bottom-[12%] right-[4px] mt-4">
+    <img alt="" class="laptop:hidden" src="images/pattern-divider-mobile.svg">
+    <img alt="" class="max-laptop:hidden" src="images/pattern-divider-desktop.svg">
+  </div>
+
+  <button aria-label="change quote" class="w-[50px] h-[50px] bg-neon-green flex items-center justify-center transform -translate-x-1/2 rounded-full absolute bottom-[-10%] left-1/2" id="diceBtn">
+    <img alt="" class="w-[24px] h-[24px]" src="images/icon-dice.svg">
+  </button>
+</main>
+<script src="main.js"></script>
 </body>
 </html>
