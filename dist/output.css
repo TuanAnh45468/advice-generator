@@ -427,7 +427,7 @@ body {
   font-size: 28px;
 }
 
-button:hover, button:active{
+button:hover{
   box-shadow: 0 0 10px hsl(150, 100%, 66%),
         0 0 20px hsl(150, 100%, 66%),
         0 0 30px hsl(150, 100%, 66%),
@@ -692,6 +692,13 @@ button:hover, button:active{
 
 .ease-in-out {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover\:neon-effect:hover{
+  box-shadow: 0 0 10px hsl(150, 100%, 66%),
+        0 0 20px hsl(150, 100%, 66%),
+        0 0 30px hsl(150, 100%, 66%),
+        0 0 40px hsl(150, 100%, 66%);
 }
 
 .hover\:scale-110:hover {

@@ -23,10 +23,9 @@ diceBtn.addEventListener("click", () => {
 });
 
 hammerInstance.on("tap", function (e) {
-  diceBtn.style.boxShadow =
-    "0 0 10px hsl(150, 100%, 66%), 0 0 20px hsl(150, 100%, 66%), 0 0 30px hsl(150, 100%, 66%), 0 0 40px hsl(150, 100%, 66%)";
-});
-
-hammerInstance.on("pressup", function (e) {
-  diceBtn.style.boxShadow = "";
+  if (diceBtn.style.boxShadow === "") {
+    diceBtn.classList.add("hover:neon-effect");
+  } else {
+    diceBtn.classList.remove("hover:neon-effect");
+  }
 });
