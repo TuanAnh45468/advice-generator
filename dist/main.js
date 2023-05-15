@@ -10,6 +10,10 @@ const diceBtn = document.getElementById("diceBtn");
 let hammerInstance = new Hammer(diceBtn);
 
 diceBtn.addEventListener("click", () => {
+  const spinner = document.querySelector(".lds-spinner");
+  adviceQuote.classList.add("hidden");
+  spinner.classList.remove("hidden");
+
   fetch("https://api.adviceslip.com/advice")
     .then((response) => response.json())
     .then((data) => {
@@ -19,7 +23,11 @@ diceBtn.addEventListener("click", () => {
       adviceID.textContent = `Advice # ${id}`;
       adviceQuote.textContent = '"' + advice + '"';
     })
-    .catch((error) => console.error("Error: ", error));
+    .catch((error) => console.error("Error: ", error))
+    .finally(() => {
+      spinner.classList.add("hidden");
+      adviceQuote.classList.remove("hidden");
+    });
 });
 
 hammerInstance.on("tap", function (e) {

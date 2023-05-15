@@ -51,6 +51,7 @@ Users should be able to:
 
 - [Tailwindcss cheatsheet](https://tailwindcomponents.com/cheatsheet/) 
 - [Hammer.js](https://hammerjs.github.io/getting-started/)
+- [CSS Loader](https://loading.io/css/)
 ## Author
 
 - Website - [Tuan Anh](https://tuananhportfolio.netlify.app/)

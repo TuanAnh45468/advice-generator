@@ -15,9 +15,12 @@
 </head>
 <body class="bg-dark-blue flex flex-col items-center justify-center min-h-screen">
 <main class="bg-dark-grayish-blue mobile:w-[335px] laptop:w-[500px] mobile:min-h-[300px] rounded-xl shadow-2xl relative flex flex-col">
+  <h1 class="sr-only">Advice generator app</h1>
   <div class="text-neon-green mt-6 text-center tracking-widest text-base" id="advice-id">
     Advice #<!-- Advice ID goes here -->
   </div>
+
+  <div class="lds-spinner absolute hidden top-[37%] left-1/2 transform -translate-x-1/2"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
 
   <p class="text-light-cyan text-center overflow-auto max-h-[200px] p-4" id="advice-quote">
     "<!-- Advice text goes here -->"
